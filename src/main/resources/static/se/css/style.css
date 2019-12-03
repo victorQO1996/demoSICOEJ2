@@ -77,7 +77,7 @@ a:hover {
   top: 0; }
 .btn.btn-2 {
   letter-spacing: .2em;
-  text-transform: uppercase;
+
   font-size: 12px;
   font-weight: 700; }
 .btn:hover, .btn:active, .btn:focus {
@@ -249,7 +249,7 @@ a:hover {
   margin-bottom: 10px; }
 .site-footer .footer-heading {
   font-size: 14px;
-  text-transform: uppercase;
+
   letter-spacing: .1em;
   color: #fff;
   position: relative;
@@ -449,7 +449,7 @@ a:hover {
   margin-left: 0px; }
 .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a {
   display: inline-block;
-  text-transform: uppercase; }
+ }
 .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a img {
   max-width: 70px; }
 .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a:hover {
@@ -587,7 +587,7 @@ a:hover {
   height: calc(20vh); }
 .site-blocks-cover .sub-text {
   font-size: 1.1rem;
-  text-transform: uppercase;
+
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: .2em; }
 .site-blocks-cover h1 {
@@ -603,7 +603,7 @@ a:hover {
 .site-blocks-cover.subscribe h2 {
   font-size: 20px;
   letter-spacing: .1em;
-  text-transform: uppercase;
+
   font-weight: 300;
   color: #fff; }
 .site-blocks-cover.subscribe p {
@@ -612,14 +612,14 @@ a:hover {
 .site-blocks-cover .property-offer-type {
   letter-spacing: .2em;
   font-size: 12px;
-  text-transform: uppercase;
+
   padding-top: 5px;
   padding-bottom: 5px; }
 
 .caption-text {
   letter-spacing: .2em;
   font-size: 12px;
-  text-transform: uppercase;
+
   padding-top: 5px;
   padding-bottom: 5px; }
 
@@ -705,7 +705,7 @@ a:hover {
   margin-bottom: 5px;
   padding: 1px 7px;
   color: #fff;
-  text-transform: uppercase;
+
   letter-spacing: .2em;
   font-size: 9px;
   border-radius: 4px; }
@@ -737,7 +737,7 @@ a:hover {
   margin-bottom: 10px; }
 .property-entry .property-specs {
   display: block;
-  text-transform: uppercase;
+
   font-size: 10px;
   letter-spacing: .1em; }
 .property-entry .property-price {
@@ -771,7 +771,7 @@ a:hover {
 
 .property-specs {
   display: block;
-  text-transform: uppercase;
+
   font-size: 10px;
   letter-spacing: .1em; }
 
@@ -779,7 +779,7 @@ a:hover {
   font-size: 1.3rem; }
 
 .site-section-title h2 {
-  text-transform: uppercase;
+
   color: #000;
   font-weight: 700;
   font-size: 2rem;
@@ -793,7 +793,7 @@ a:hover {
   -webkit-box-shadow: 0 0px 30px 0px rbga(0, 0, 0, 1);
   box-shadow: 0 0px 30px 0px rbga(0, 0, 0, 1); }
 .form-search label {
-  text-transform: uppercase;
+
   font-size: 13px;
   letter-spacing: .1em;
   color: rgba(255, 255, 255, 0.3); }
@@ -935,7 +935,7 @@ a:hover {
 .service p {
   color: rgba(0, 0, 0, 0.6); }
 .service .read-more {
-  text-transform: uppercase;
+
   font-size: 12px;
   letter-spacing: .2em; }
 
@@ -1026,7 +1026,7 @@ a:hover {
   font-size: 14px;
   font-weight: bold;
   color: #000;
-  text-transform: uppercase;
+
   letter-spacing: .1em; }
 
 .form-contact-agent .form-control {
@@ -1455,7 +1455,7 @@ input.add-event-edit:-ms-input-placeholder {
   cursor: pointer;
   opacity: 0;
   animation: popIn 200ms 1 forwards;
-  text-transform: uppercase;
+
 }
 .day-view-date{
   position: absolute;
@@ -1550,7 +1550,7 @@ input.add-event-edit:-ms-input-placeholder {
   font-family: 'Avenir', sans-serif;
   padding-bottom: 20px;
   color: #222;
-  text-transform: uppercase;
+
   display: flex;
   flex-wrap: nowrap;
   align-items: baseline;
