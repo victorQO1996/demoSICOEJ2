@@ -8,7 +8,7 @@
   <meta content="" name="description">
   <!--<link href="#" th:href="@{/css/style.css}" rel="stylesheet" />-->
   <!-- Favicons -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}"/>
   <link href="#" th:href="@{/img/favicon.png}"    rel="icon">
   <link href="#" th:href="@{/img/apple-touch-icon.png}" rel="apple-touch-icon">
 
@@ -30,7 +30,7 @@
   <link href="#" th:href="@{/css/nivo-slider-theme.css}"   rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link  href="#" th:href="@{/css/style.css}"   rel="stylesheet">
+  <link   th:href="@{/css/style.css}" href="#"  rel="stylesheet">
 
   <!-- Responsive Stylesheet File -->
   <link href="#" th:href="@{/css/responsive.css}"   rel="stylesheet">
@@ -98,10 +98,18 @@
 					  <li><a href=# >Actualizar</a></li>
                     </ul> 
                   </li>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
 
+                      <li><a href="#" th:href="@{/users/userForm?id=0}">Registrar Usuario</a></li>
+                      <li><a href=# th:href="@{/users/showUsers}">Usuarios Registrados</a></li>
+
+                    </ul>
+                  </li>
 				  <li>
                     <a class="page-scroll" href="#contact">Contacto</a>
                   </li>
+
 				  
 				  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">

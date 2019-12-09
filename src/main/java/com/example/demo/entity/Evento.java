@@ -28,10 +28,10 @@ public class Evento {
     private String lugar;
 
     public Evento(String nombre, Date fecha, String horario, String descripcion, String lugar) {
-        Nombre = nombre;
-        Fecha = fecha;
-        Horario = horario;
-        Descripcion = descripcion;
+        this.Nombre = nombre;
+        this.Fecha = fecha;
+        this.Horario = horario;
+        this.Descripcion = descripcion;
         this.lugar = lugar;
     }
 

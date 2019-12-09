@@ -7,7 +7,8 @@ public class ViewConstant {
     public static final String EVENTOS = "EventosRegistrados";
     public static final String EVENTOS_REGISTRADOS = "eventos";
     public static final String CALENDARIO = "gg2";
-
+    public static final String USER_FORM = "RegistroUsuarios";
+    public static final String USUARIOS = "UsuariosRegistrados";
 
 
 
