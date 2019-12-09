@@ -37,11 +37,12 @@ public class UserController {
 
     @GetMapping("/userForm")
     public String redirectUserForm(Model model,
-                                      @RequestParam(name = "id", required = false) int id){
+                                      @RequestParam(name = "id", required = false) int id, String Usuario){
         UserModel userModel = new UserModel();
-
+        
         if(id != 0){
             userModel = userService.findUserByIdModel(id);
+
         }
         model.addAttribute("userModel", userModel);
         return ViewConstant.USER_FORM;
@@ -64,7 +65,7 @@ public class UserController {
         }else{
             model.addAttribute("result", 0);
         }
-        return ViewConstant.USUARIOS;
+        return "redirect:/users/showUsers";
     }
 
     @GetMapping("/showUsers")
