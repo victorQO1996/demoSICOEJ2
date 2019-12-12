@@ -27,6 +27,7 @@ public class Evento {
     @Column(name = "lugar")
     private String lugar;
 
+
     public Evento(String nombre, Date fecha, String horario, String descripcion, String lugar) {
         this.Nombre = nombre;
         this.Fecha = fecha;
@@ -35,9 +36,12 @@ public class Evento {
         this.lugar = lugar;
     }
 
+
     public Evento(){
 
     }
+
+
 
     public int getId() {
         return id;
@@ -86,4 +90,5 @@ public class Evento {
     public void setLugar(String lugar) {
         this.lugar = lugar;
     }
+
 }
