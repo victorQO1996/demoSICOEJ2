@@ -13,4 +13,7 @@ public class InicioController {
     @GetMapping("/inicio")
     public String inicio(){ return ViewConstant.INDEX; }
 
+    @GetMapping("/inicio2")
+    public String inicio2(){ return ViewConstant.INDEX2; }
+
 }

@@ -42,6 +42,7 @@ public class UserController {
 
         if(id != 0){
             userModel = userService.findUserByIdModel(id);
+
         }
         model.addAttribute("userModel", userModel);
         return ViewConstant.USER_FORM;
@@ -64,7 +65,7 @@ public class UserController {
         }else{
             model.addAttribute("result", 0);
         }
-        return ViewConstant.USUARIOS;
+        return "redirect:/users/showUsers";
     }
 
     @GetMapping("/showUsers")

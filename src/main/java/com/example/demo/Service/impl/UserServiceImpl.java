@@ -57,6 +57,7 @@ public class UserServiceImpl implements UserService {
 
 
 
+
     public UserModel findUserByIdModel(int id){
         return userConverter.convertContact2UserModelUser(findUserById(id));
     }

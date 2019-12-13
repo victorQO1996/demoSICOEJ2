@@ -81,6 +81,7 @@
                                 <span class="icon-bar"></span>
                             </button>
 
+
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
@@ -183,6 +184,7 @@
                                     <thead>
                                     <tr>
 
+                                        <th>#ID</th>
                                         <th>Usuario</th>
                                         <th>Contraseña</th>
                                         <th>Tipo/Usuario &nbsp; &nbsp;</th>
@@ -192,6 +194,7 @@
                                     <tbody>
                                     <tr th:each="user:${users}">
 
+                                        <td th:text="${user.id}"></td>
                                         <td th:text="${user.usuario}"></td>
                                         <td th:text="${user.contrasena}"></td>
                                         <td th:text="${user.tipoUsuario}"></td>
