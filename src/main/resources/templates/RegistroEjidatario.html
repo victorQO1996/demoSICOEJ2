@@ -330,32 +330,28 @@
                                         <input type="hidden" th:field="*{id}"></input>
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <p>Nombre Completo*</p>
-                                            <input type="text" th:field="*{nombre}" th:value="${TipoUsuario}" class="form-control" id="TipoUsuario" placeholder="Tipo de Usuario" data-rule="minlen:4"  />
+                                            <input type="text" th:field="*{nombre}" th:value="${Nombre}" class="form-control" id="Nombre Completo" placeholder="Nombre Completo" data-rule="minlen:4"  />
                                         </div>
 
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <p>Fecha de Nacimiento*</p>
-                                            <input type="date" />
+                                            <input type="date" th:field="*{fecha}" th:value="${Fecha}" class="form-control" id="Fecha de Nacimiento" placeholder="Fecha de Nacimiento" data-rule="minlen:4" />
                                         </div>
 
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <p>Email *</p>
-                                            <input type="email" />
+                                            <input type="email" th:field="*{email}" th:value="${Email}" class="form-control" id="Correo electronico" placeholder="Correo electronico" data-rule="minlen:4" />
                                         </div>
 
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <p>CURP</p>
-                                            <input type="text" />
+                                            <input type="text"th:field="*{CURP}" th:value="${CURP}" class="form-control" id="CURP" placeholder="CURP" data-rule="minlen:4" />
                                         </div>
 
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                            <p>Dirección *</p>
-                                            <input type="text" />
-                                        </div>
 
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <p>Telefono *</p>
-                                            <input type="number" th:field="*{tipoUsuario}" th:value="${TipoUsuario}" class="form-control" id="TipoUsuario" placeholder="Tipo de Usuario" data-rule="minlen:4" />
+                                            <input type="number" th:field="*{telefono}" th:value="${Telefono}" class="form-control" id="Telefono" placeholder="Telefono" data-rule="minlen:4" />
                                         </div>
 
                                     </div>
@@ -365,22 +361,22 @@
 
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <p>Nombre de la Empresa*</p>
-                                            <input type="text" />
+                                            <input type="text"  th:field="*{nombreEmpresa}" th:value="${nombreEmpresa}" class="form-control" id="Nombre de la empresa" placeholder="Nombre de la empresa" data-rule="minlen:4"/>
                                         </div>
 
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <p>Telefono de la Empresa*</p>
-                                            <input type="text" />
+                                            <input type="text" th:field="*{telefonoEmpresa}" th:value="${telefonoEmpresa}" class="form-control" id="Telefono de la Empresa" placeholder="Telefono de la Empresa" data-rule="minlen:4" />
                                         </div>
 
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <p>Dirección de la Empresa</p>
-                                            <input type="text" />
+                                            <input type="text" th:field="*{direccionEmpresa}" th:value="${direccionEmpresa}" class="form-control" id="Dirección de la Empresa" placeholder="Dirección de la Empresa" data-rule="minlen:4" />
                                         </div>
 
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <p>Email de la Empresa</p>
-                                            <input type="email" />
+                                            <input type="email" th:field="*{emailEmpresa}" th:value="${emailEmpresa}" class="form-control" id="Correo electronico de la Empresa" placeholder="Correo electronico de la Empresa" data-rule="minlen:4"/>
                                         </div>
 
 
