@@ -37,7 +37,7 @@ public class UserController {
 
     @GetMapping("/userForm")
     public String redirectUserForm(Model model,
-                                      @RequestParam(name = "id", required = false) int id, String Usuario){
+                                      @RequestParam(name = "id", required = false) int id){
         UserModel userModel = new UserModel();
 
         if(id != 0){
