@@ -7,28 +7,41 @@ import java.util.Date;
 @Table(name="pagos")
 public class Pagos {
 
+    @Id
     @GeneratedValue
+    @Column(name = "id")
+    private int id;
+
     @Column(name = "fechaPago")
     private Date fechaPago;
-    @Id
-    @Column(name = "folioPago")
-    private int folioPago;
+
     @Column(name = "nombrePago")
     private String nombrePago;
+
     @Column(name = "conceptoPago")
     private String conceptopPago;
+
     @Column(name = "importePago")
     private float importePago;
 
     public Pagos(){
 
     }
-    public Pagos(Date fechaPago, int folioPago, String nombrePago, String conceptopPago, float importePago) {
+
+
+    public Pagos(Date fechaPago, String nombrePago, String conceptopPago, float importePago) {
         this.fechaPago = fechaPago;
-        this.folioPago = folioPago;
         this.nombrePago = nombrePago;
         this.conceptopPago = conceptopPago;
         this.importePago = importePago;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Date getFechaPago() {
@@ -37,14 +50,6 @@ public class Pagos {
 
     public void setFechaPago(Date fechaPago) {
         this.fechaPago = fechaPago;
-    }
-
-    public int getFolioPago() {
-        return folioPago;
-    }
-
-    public void setFolioPago(int folioPago) {
-        this.folioPago = folioPago;
     }
 
     public String getNombrePago() {

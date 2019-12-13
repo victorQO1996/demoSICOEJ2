@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
 <meta charset="utf-8">
 <title>SICOEJ- Registro Recibo</title>
@@ -163,9 +163,9 @@
 
                 <!-- Empieza seccion de registro de pago -->
                 <div>
-                <form class="needs-validation" novalidate style="width: 70%;"action="#" th:action="@{/ControllerBasic/RegistroPago}" th:object="${PagosModel}" method="post">
+                <form class="needs-validation" th:action="@{/pagos/addPago}" th:object="${pagosModel}" method="post"  novalidate style="width: 70%;"  >
                      <div class="form-row" style="width: 70%;">
-                         <div action="#" th:action="@{/pagos/addPagos}" th:object="${PagosModel}" >
+                         <div  >
                              <label  class="margin-right:60px">Fecha:</label>
                              <script>
                                  var f = new Date();
@@ -177,16 +177,16 @@
                              <!--                           min="2018-01-01" max="2023-12-31"></input>-->
 
                              <label style="left: 30px;" >Folio:</label>
-                             <input style="left: 30px;" type="number"  placeholder="000" class="form-control" th:field="*{folioPagos}" th:value="${folioPagos}"></input>
+                             <input style="left: 30px;" type="number"  placeholder="000" class="form-control" th:field="*{folio}" th:value="${folio}"></input>
 
                          </div>
                         <div class="">
-                            <label for="validationCustom01" >Nombre Completo:</label>
-                            <input type="text" class="form-control" th:field="*{nombrePago}" th:value="${nombrePago}"></input>
+                            <label  >Nombre Completo:</label>
+                            <input type="text" class="form-control" th:field="*{id}" th:value="${nombrePago}"></input>
                         </div>
                     </div>
                     <div class="form-group" style="width: 50rem;">
-                        <label for="exampleFormControlSelect1">Concepto: </label>
+                        <label ">Concepto: </label>
                         <select type="text" name="conceptoPagos"  th:field="*{conceptoPagos}" th:value="${conceptoPagos}" class="form-control" id="" placeholder="conceptoPagos" data-rule="minlen:4" data-msg="Datos incorrectos, Seleccione un cocepto">
                             <option >Selecciona una opcion...</option>
                             <option value="Cuotas">Cuotas</option>
@@ -200,7 +200,14 @@
 
                             </div>
                     <div>
-                        <button class="btn btn-primary" type="submit">Registrar</button>
+                        <button class="btn btn-primary" type="submit" onclick="pregunta()" >Registrar</button>
+                        <script language="JavaScript">
+                            function pregunta(){
+                                if (confirm('¿Estas seguro de enviar este formulario?')){
+                                    document.tuformulario.submit()
+                                }
+                            }
+                        </script>
                     </div>
 
                     </form>

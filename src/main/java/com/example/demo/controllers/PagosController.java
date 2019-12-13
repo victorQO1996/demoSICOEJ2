@@ -1,9 +1,10 @@
 package com.example.demo.controllers;
 
 
-import com.uabc.database.example.examplejpa.constant.ViewConstant;
-import com.uabc.database.example.examplejpa.model.PagosModel;
-import com.uabc.database.example.examplejpa.services.PagosService;
+import com.example.demo.Model.PagosModel;
+import com.example.demo.Service.PagoService;
+import com.example.demo.constant.ViewConstant;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +19,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class PagosController {
 
     @Autowired
-    @Qualifier("PagosServiceImpl")
-    private PagosService pagosService;
+    @Qualifier("pagoServiceImpl")
+    private PagoService pagoService;
 
     private static final Log log = LogFactory.getLog(PagosController.class);
 
     @GetMapping("/cancel")
     public String cancel(){
-        return "redirect:/pagoss/showpagoss";
+        return "redirect:/pagos/showPagoss";
     }
 
     @GetMapping("/pagosForm")
@@ -33,36 +34,36 @@ public class PagosController {
                                       @RequestParam(name = "id", required = false) int id){
         PagosModel pagosModel = new PagosModel();
         if(id != 0){
-            pagosModel = pagosService.findPagosByIdModel(id);
+            pagosModel = pagoService.findPagosByIdModel(id);
         }
         model.addAttribute("pagosModel", pagosModel);
         return ViewConstant.PAGOS_FORM;
     }
 
-    @PostMapping("/addpagos")
+    @PostMapping("/addPago")
     //El ModelAttribute corresponde con el th:object que utilizamos en la vista de pagosform
-    public String addpagos(@ModelAttribute(name = "pagosModel")PagosModel pagosModel,
-                             Model model){
-        log.info("Method: addpagos() -- Params: "+pagosModel.toString());
-        if(pagosService.addPagos(pagosModel) != null){
+    public String addPago(@ModelAttribute(name = "pagosModel")PagosModel pagosModel,
+                             Model model) throws Exception {
+        log.info("Method: addPago() -- Params: "+pagosModel.toString());
+        if(pagoService.addPago(pagosModel) != null){
             model.addAttribute("result", 1);//esto es para que se muestre un mensaje de que se agregó éxitosamente
         }else{
             model.addAttribute("result", 0);
         }
-        return "redirect:/pagoss/showpagoss";
+        return "redirect:/pagos/showPagoss";
     }
 
-    @GetMapping("/showpagoss")
-    public ModelAndView showpagoss(){
+    @GetMapping("/showPagoss")
+    public ModelAndView showPagoss(){
         ModelAndView mav = new ModelAndView(ViewConstant.PAGOS);
-        mav.addObject("pagos", pagosService.listAllPagos());
+        mav.addObject("pagos", pagoService.listAllPagos());
         return mav;
     }
 
-    @GetMapping("/removepagos")
-    public ModelAndView removepagos(@RequestParam(name = "id", required = true) int id){
-        pagosService.removePagos(id);
-        return showpagoss();
+    @GetMapping("/removePagos")
+    public ModelAndView removePagos(@RequestParam(name = "id", required = true)int id){
+        pagoService.removePago(id);
+        return showPagoss();
     }
 
 

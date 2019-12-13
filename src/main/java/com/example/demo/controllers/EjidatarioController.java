@@ -48,6 +48,9 @@ public class EjidatarioController {
         return ViewConstant.EJIDATARIO_FORM;
     }
 
+
+
+
    /* @GetMapping("/calendario")
     public String calendario(Model model) {
         List<EventoModel> lista= eventoService.listAllEventos();
@@ -55,17 +58,16 @@ public class EjidatarioController {
         return ViewConstant.CALENDARIO;
     }*/
 
-    @PostMapping("/addejidatario")
-    //El ModelAttribute corresponde con el th:object que utilizamos en la vista de contactform
+    @PostMapping("/addEjidatario")
     public String addEjidatario(@ModelAttribute (name = "ejidatarioModel")@Valid EjidatarioModel ejidatarioModel,
                                 Model model)throws Exception{
-        log.info("Method: addContact() -- Params: "+ejidatarioModel.toString());
+        log.info("Method: addEjidatario() -- Params: "+ejidatarioModel.toString());
         if(ejidatarioService.addEjidatario(ejidatarioModel) != null){
             model.addAttribute("result", 1);//esto es para que se muestre un mensaje de que se agregó éxitosamente
         }else{
             model.addAttribute("result", 0);
         }
-        return  ViewConstant.EJIDATARIOS;    //return  "redirect:/ejidatarios/showEjidatarios";
+        return  ViewConstant.EJIDATARIO_FORM;    //return  "redirect:/ejidatarios/showEjidatarios";
     }
 
     @GetMapping("/showEjidatarios")

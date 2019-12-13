@@ -13,6 +13,9 @@ public class ViewConstant {
     public static final String EJIDATARIO_FORM = "RegistroEjidatario";
     public static final String EJIDATARIOS = "EjidatariosRegistrados";
 
+    public static final String PAGOS = "EventosRegistrados";
+    public static final String PAGOS_FORM = "EventosRegistrados";
+
 
 
 }
