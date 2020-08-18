@@ -165,6 +165,7 @@
                 <div>
                 <form class="needs-validation" th:action="@{/pagos/addPago}" th:object="${pagosModel}" method="post"  novalidate style="width: 70%;"  >
                      <div class="form-row" style="width: 70%;">
+                         <input type="hidden" th:field="*{id}"></input>
                          <div  >
                              <label  class="margin-right:60px">Fecha:</label>
                              <script>
@@ -176,18 +177,18 @@
                              <!--                           value="yyyy-mm-dd"-->
                              <!--                           min="2018-01-01" max="2023-12-31"></input>-->
 
-                             <label style="left: 30px;" >Folio:</label>
-                             <input style="left: 30px;" type="number"  placeholder="000" class="form-control" th:field="*{folio}" th:value="${folio}"></input>
 
                          </div>
                         <div class="">
                             <label  >Nombre Completo:</label>
-                            <input type="text" class="form-control" th:field="*{id}" th:value="${nombrePago}"></input>
+
+                            <input type="text" name="NombreEvento" th:field="*{nombrePago}" th:value="${nombrePago}"class="form-control" id="NombreEvento" placeholder="Nombre del Evento" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el nombre del evento" ></input>
+
                         </div>
                     </div>
                     <div class="form-group" style="width: 50rem;">
-                        <label ">Concepto: </label>
-                        <select type="text" name="conceptoPagos"  th:field="*{conceptoPagos}" th:value="${conceptoPagos}" class="form-control" id="" placeholder="conceptoPagos" data-rule="minlen:4" data-msg="Datos incorrectos, Seleccione un cocepto">
+                        <label>Concepto: </label>
+                        <select type="text" name="conceptoPagos"  th:field="*{conceptopPago}" th:value="${conceptopPago}" class="form-control" id="" placeholder="conceptoPagos" data-rule="minlen:4" data-msg="Datos incorrectos, Seleccione un cocepto">
                             <option >Selecciona una opcion...</option>
                             <option value="Cuotas">Cuotas</option>
                             <option value="Pagos de documentos">Pagos de Documentos</option>
@@ -196,7 +197,7 @@
                     </div>
                         <div class="col-md-4s" style="width: 18rem;">
                             <label>importe:</label>
-                            <input type="number" class="form-control"  placeholder="0.00" value="0.00" required th:field="*{importeRecibo}" th:value="${importeRecibo}"></input>
+                            <input type="number" class="form-control"  placeholder="0.00" value="0.00" required th:field="*{importePago}" th:value="${importePago}"></input>
 
                             </div>
                     <div>

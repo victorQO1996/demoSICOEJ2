@@ -16,4 +16,19 @@ public class InicioController {
     @GetMapping("/inicio2")
     public String inicio2(){ return ViewConstant.INDEX2; }
 
+    @GetMapping({"/","/login"})
+    public String index() {
+        return "index";
+    }
+
+
+    @GetMapping("/user")
+    public String user() {
+        return ViewConstant.INDEX;
+    }
+
+    @GetMapping("/admin")
+    public String admin() {
+        return ViewConstant.INDEX2;
+    }
 }

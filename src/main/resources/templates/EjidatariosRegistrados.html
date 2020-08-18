@@ -157,7 +157,7 @@
 
 <!-- Start contact Area -->
 <div id="contact" class="contact-area">
-    <div class="contact-inner area-padding">
+    <div class="contact-inner area-padding"><center>
         <div class="contact-overly"></div>
         <div class="container ">
             <div class="row">
@@ -170,13 +170,11 @@
             </div>
             <div class="row">
                 <!-- Start contact icon column -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
 
-                </div>
                 <!-- Start contact icon column -->
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="contact-icon text-center">
-                        <div class="form contact-form">
+                        <div class="form contact-form" align="center">
                             <div id="errormessage"></div>
                             <div class="panel panel-default">
                                 <div class="panel-heading"></div>
@@ -189,6 +187,10 @@
                                         <th>CURP</th>
                                         <th>Telefono</th>
                                         <th>Email</th>
+                                        <th>Nombre de la Empresa</th>
+                                        <th>Telefono de la Empresa</th>
+                                        <th>Dirección de la Empresa</th>
+
 
 
 
@@ -203,6 +205,9 @@
                                         <td th:text="${ejidatario.CURP}"></td>
                                         <td th:text="${ejidatario.telefono}"></td>
                                         <td th:text="${ejidatario.email}"></td>
+                                        <td th:text="${ejidatario.nombreEmpresa}"></td>
+                                        <td th:text="${ejidatario.telefonoEmpresa}"></td>
+                                        <td th:text="${ejidatario.direccionEmpresa}"></td>
 
 
 
@@ -221,21 +226,11 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Start contact icon column -->
 
             </div>
-            <div class="row">
 
-                <!-- Start Google Map -->
-
-                <!-- End Google Map -->
-
-                <!-- Start  contact -->
-                <div class="col-md-6 col-sm-6 col-xs-12">
-
-                </div>
-                <!-- End Left contact -->
-            </div>
         </div>
     </div>
 </div>
