@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Control Ejidal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+
+
+    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}"/>
+    <link href="#" th:href="@{/img/favicon.png}"    rel="icon">
+    <link href="#" th:href="@{/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"   rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="#" th:href="@{/lib/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="#" th:href="@{/lib/nivo-slider/css/nivo-slider.css}"  rel="stylesheet">
+    <link href="#" th:href="@{/lib/owlcarousel/owl.carousel.css}"  rel="stylesheet">
+    <link href="#" th:href="@{/lib/owlcarousel/owl.transitions.css}"  rel="stylesheet">
+    <link href="#" th:href="@{/lib/font-awesome/css/font-awesome.min.css}"  rel="stylesheet">
+    <link href="#" th:href="@{/lib/animate/animate.min.css}" rel="stylesheet">
+    <link href="#" th:href="@{/lib/venobox/venobox.css}" rel="stylesheet">
+
+    <!-- Nivo Slider Theme -->
+    <link href="#" th:href="@{/css/nivo-slider-theme.css}"   rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link   th:href="@{/css/style.css}" href="#"  rel="stylesheet">
+
+    <!-- Responsive Stylesheet File -->
+    <link href="#" th:href="@{/css/responsive.css}"   rel="stylesheet">
+
+    <!-- =======================================================
+      Theme Name: eBusiness
+      Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
+      Author: BootstrapMade.com
+      License: https://bootstrapmade.com/license/
+    ======================================================= -->
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+
+<div id="preloader"></div>
+
+<header>
+    <!-- header-area start -->
+    <div id="sticker" class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+
+                    <!-- Navigation -->
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active">
+                                    <a class="page-scroll" href="#home" th:href="@{/inicio}">Inicio</a>
+                                </li>
+
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Eventos<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+
+                                        <li><a href="#" th:href="@{/eventos/contactForm?id=0}">Registrar Evento</a></li>
+                                        <li><a href=# th:href="@{/eventos/showContacts}">Eventos Registrados</a></li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="#services">Pagos/Cuotas</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="#" th:href="@{/eventos/calendario}">Calendario</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="#portfolio"></a>
+                                </li>
+
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentación<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href=# >Solicitar</a></li>
+                                        <li><a href=# >Historial</a></li>
+                                        <li><a href=# >Actualizar</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+
+                                        <li><a href="#" th:href="@{/users/userForm?id=0}">Registrar Usuario</a></li>
+                                        <li><a href=# th:href="@{/users/showUsers}">Usuarios Registrados</a></li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="#contact">Contacto</a>
+                                </li>
+
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href=# >Cerrar Sesión</a></li>
+                                        <li><a href=# >#Historial# Pendiente</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <!-- navbar-collapse -->
+                    </nav>
+                    <!-- END: Navigation -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header-area end -->
+</header>
+<!-- header end -->
+
+<!-- Start Slider Area -->
+
+</div>
+<!-- End About area -->
+
+
+<!-- Start contact Area -->
+<div id="contact" class="contact-area">
+    <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-headline text-center">
+                        <br>
+                        <h2>Registrar Eventos</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Start contact icon column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+
+                </div>
+                <!-- Start contact icon column -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="contact-icon text-center">
+                        <div class="form contact-form">
+
+
+                            <form  action="#"  th:action="@{/eventos/addcontact}" th:object="${eventoModel}" method="post" role="form" class="contactForm">
+                                <input type="hidden" th:field="*{id}"></input>
+                                <div class="form-group">
+                                    <input type="text" name="TipoSolicitud" th:field="*{solicitud}" th:value="${TipoSolicitud}"class="form-control" id="TipoSolicitud" placeholder="Tipo de Solicitud" data-rule="minlen:4" data-msg="Campo vacio, por favor ingresa el nombre de tipo de solicitud" ></input>
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                <input type="date"  name="FechaSolicitada" th:field="*{fecha}" th:value="${FechaSolicitada}"class="form-control" id="FechaSolicitada" placeholder="Fecha de Solicitud" data-rule="minlen:4" data-msg="Campo vacio, por favor ingresa la fecha de la Solicitud"></input>
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Solicitante" th:field="*{solicitante}" th:value="${Solicitante}"class="form-control" id="Solicitante" placeholder="Nombre del Solicitante" data-rule="minlen:4" data-msg="Campo vacio, por favor ingresa el nombre del Solicitante" ></input>
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="NumeroEjidatario" th:field="*{ejidatario}" th:value="${NumeroEjidatario}" id="NumeroEjidatario" placeholder="Número de Ejidatario" data-rule="minlen:4" data-msg="Campo vacio, por favor ingresa el número de Ejidatario" ></input>
+                                    <div class="validation"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="NumeLote" th:field="*{lote}" th:value="${NumeLote}" id="NumeLote" placeholder="Número de Lote" data-rule="minlen:4" data-msg="Campo vacio, por favor ingresa el número de lote" ></input>
+                                    <div class="validation"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea class="form-control" type="text" name="Razón" th:field="*{razon}" th:value="${Razon}" rows="5" id="Descripción" data-rule="required" data-msg="Campo vacio, por favor ingresa el Razón de Solicitud" placeholder="Razón de Solicitud"></textarea>
+                                    <div class="validation"></div>
+                                </div>
+
+                                <div class="text-center"><button type="submit">Guardar</button></div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Start contact icon column -->
+
+            </div>
+            <div class="row">
+
+                <!-- Start Google Map -->
+
+                <!-- End Google Map -->
+
+                <!-- Start  contact -->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+
+                </div>
+                <!-- End Left contact -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Contact Area -->
+
+<!-- Start Footer bottom Area -->
+<footer>
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="footer-area-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="copyright text-center">
+                                    <p>
+
+                                    </p>
+                                </div>
+                                <div class="credits">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div></div></div></footer>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script th:src="@{'/lib/jquery/jquery.min.js'}"></script>
+<script th:src="@{'/lib/bootstrap/js/bootstrap.min.js'}" ></script>
+<script th:src="@{'/lib/owlcarousel/owl.carousel.min.js'}" ></script>
+<script th:src="@{'/lib/venobox/venobox.min.js'}" ></script>
+<script th:src="@{'/lib/knob/jquery.knob.js'}" ></script>
+<script th:src="@{'/lib/wow/wow.min.js'}" ></script>
+<script th:src="@{'/lib/parallax/parallax.js'}" ></script>
+<script th:src="@{'/lib/easing/easing.min.js'}" ></script>
+<script th:src="@{'/lib/nivo-slider/js/jquery.nivo.slider.js'}"  type="text/javascript"></script>
+<script th:src="@{'/lib/appear/jquery.appear.js'}" ></script>
+<script th:src="@{'/lib/isotope/isotope.pkgd.min.js'}" ></script>
+
+<!-- Contact Form JavaScript File -->
+<script th:src="@{'/contactform/contactform.js'}" ></script>
+
+<script th:src="@{'/js/main.js'}" ></script>
+</body>
+
+</html>
