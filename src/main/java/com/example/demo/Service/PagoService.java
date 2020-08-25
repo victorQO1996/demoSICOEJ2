@@ -15,10 +15,10 @@ public interface PagoService {
 
     public abstract List<PagosModel> listAllPagos();
 
-    public abstract Pagos findPagosById(int id);
+public abstract Pagos findPagosById(int id);
 
-    public abstract void removePago(int id);
+public abstract void removePago(int id);
 
-    public abstract PagosModel findPagosByIdModel(int id);
+public abstract PagosModel findPagosByIdModel(int id);
 
-}
+        }
