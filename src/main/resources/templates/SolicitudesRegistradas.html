@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <title>Control Ejidal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Favicons -->
 
-
-    <link rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css}"/>
+    <!--*****************************************************************************-->
     <link href="#" th:href="@{/img/favicon.png}"    rel="icon">
     <link href="#" th:href="@{/img/apple-touch-icon.png}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"   rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
     <link href="#" th:href="@{/lib/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
@@ -33,17 +30,33 @@
     <link href="#" th:href="@{/css/nivo-slider-theme.css}"   rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link   th:href="@{/css/style.css}" href="#"  rel="stylesheet">
+    <link  href="#" th:href="@{/css/style.css}"   rel="stylesheet">
 
     <!-- Responsive Stylesheet File -->
     <link href="#" th:href="@{/css/responsive.css}"   rel="stylesheet">
-
     <!-- =======================================================
       Theme Name: eBusiness
       Theme URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
       Author: BootstrapMade.com
       License: https://bootstrapmade.com/license/
     ======================================================= -->
+    <script th:src="@{'/lib/jquery/jquery.min.js'}"></script>
+    <script th:src="@{'/lib/bootstrap/js/bootstrap.min.js'}" ></script>
+    <script th:src="@{'/lib/owlcarousel/owl.carousel.min.js'}" ></script>
+    <script th:src="@{'/lib/venobox/venobox.min.js'}" ></script>
+    <script th:src="@{'/lib/knob/jquery.knob.js'}" ></script>
+    <script th:src="@{'/lib/wow/wow.min.js'}" ></script>
+    <script th:src="@{'/lib/parallax/parallax.js'}" ></script>
+    <script th:src="@{'/lib/easing/easing.min.js'}" ></script>
+    <script th:src="@{'/lib/nivo-slider/js/jquery.nivo.slider.js'}"  type="text/javascript"></script>
+    <script th:src="@{'/lib/appear/jquery.appear.js'}" ></script>
+    <script th:src="@{'/lib/isotope/isotope.pkgd.min.js'}" ></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script th:src="@{'/contactform/contactform.js'}" ></script>
+
+    <script th:src="@{'/js/main.js'}" ></script>
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -151,7 +164,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="section-headline text-center">
                         <br>
-                        <h2>Registrar Eventos</h2>
+                        <h2>Eventos Registrados</h2>
                     </div>
                 </div>
             </div>
@@ -164,44 +177,45 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="contact-icon text-center">
                         <div class="form contact-form">
+                            <div id="errormessage"></div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading"></div>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>#ID</th>
+                                        <th>Nombre</th>
+                                        <th>Fecha</th>
+                                        <th>Horario</th>
+                                        <th>Descripción</th>
 
 
-                            <form  action="#"  th:action="@{/solicitudes/addSolicitudes}" th:object="${solicitudesModel}" method="post" role="form" class="contactForm">
-                                <input type="hidden" th:field="*{id}"></input>
 
-                                <div class="form-group">
-                                    <input type="date"  name="Fecha" th:field="*{fechaSolicitada}" th:value="${FechaSolicitada}"class="form-control" id="Fecha" placeholder="Nombre del Evento" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa la fecha del evento"></input>
-                                    <div class="validation"></div>
-                                </div>
 
-                                <div class="form-group">
-                                    <input type="text" name="NombreEvento" th:field="*{tipoSolicitud}" th:value="${TipoSolicitud}"class="form-control" id="TipoSolicitud" placeholder="Tipo de Solicitud" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el nombre del evento" ></input>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text"  name="Fecha" th:field="*{solicitante}" th:value="${Solicitante}"class="form-control" id="Fecha" placeholder="Nombre del Evento" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa la fecha del evento"></input>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="Horario" th:field="*{numeroEjidatario}" th:value="${NumeroEjidatario}"class="form-control" id="Horario" placeholder="Horario del Evento HH:MM AM o PM" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el horario del evento"></input>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="Horario" th:field="*{numeroEjidatario}" th:value="${NumeroEjidatario}"class="form-control" id="Horario" placeholder="Horario del Evento HH:MM AM o PM" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el horario del evento"></input>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="Horario" th:field="*{numeLote}" th:value="${NumeLote}"class="form-control" id="Horario" placeholder="Horario del Evento HH:MM AM o PM" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el horario del evento"></input>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="Horario" th:field="*{razon}" th:value="${Razon}"class="form-control" id="Horario" placeholder="Horario del Evento HH:MM AM o PM" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el horario del evento"></input>
-                                    <div class="validation"></div>
-                                </div>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="evento:${eventos}">
+                                        <td th:text="${evento.id}"></td>
+                                        <td th:text="${evento.nombre}"></td>
+                                        <td th:text="${evento.fecha}"></td>
+                                        <td th:text="${evento.horario}"></td>
+                                        <td th:text="${evento.descripcion}"></td>
 
-                                <div class="text-center"><button type="submit">Guardar</button></div>
-                            </form>
 
+
+                                        <td>
+                                            <a href="#" th:href="@{/eventos/contactForm?id=__${evento.id}__}">
+                                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+                                            </a>
+                                            <a href="#" th:href="@{/eventos/removeContact?id=__${evento.id}__}">
+                                                <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -247,28 +261,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div></div></div></footer>
+                </div></div></div></div>
+</footer>
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-<!-- JavaScript Libraries -->
-<script th:src="@{'/lib/jquery/jquery.min.js'}"></script>
-<script th:src="@{'/lib/bootstrap/js/bootstrap.min.js'}" ></script>
-<script th:src="@{'/lib/owlcarousel/owl.carousel.min.js'}" ></script>
-<script th:src="@{'/lib/venobox/venobox.min.js'}" ></script>
-<script th:src="@{'/lib/knob/jquery.knob.js'}" ></script>
-<script th:src="@{'/lib/wow/wow.min.js'}" ></script>
-<script th:src="@{'/lib/parallax/parallax.js'}" ></script>
-<script th:src="@{'/lib/easing/easing.min.js'}" ></script>
-<script th:src="@{'/lib/nivo-slider/js/jquery.nivo.slider.js'}"  type="text/javascript"></script>
-<script th:src="@{'/lib/appear/jquery.appear.js'}" ></script>
-<script th:src="@{'/lib/isotope/isotope.pkgd.min.js'}" ></script>
 
-<!-- Contact Form JavaScript File -->
-<script th:src="@{'/contactform/contactform.js'}" ></script>
 
-<script th:src="@{'/js/main.js'}" ></script>
+
 </body>
 
 </html>
