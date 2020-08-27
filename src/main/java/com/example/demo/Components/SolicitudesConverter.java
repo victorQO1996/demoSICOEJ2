@@ -10,17 +10,13 @@ import org.springframework.stereotype.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 @Component("solicitudesConverter")
 public class SolicitudesConverter {
 
-    public Solicitudes convertToSolicitudesModel2Ejidatario(SolicitudesModel solicitudesModel)throws Exception{
+    public Solicitudes convertToSolicitudesModel2Solicitudes(SolicitudesModel solicitudesModel)throws Exception{
 
         Solicitudes solicitudes = new Solicitudes();
 
-        solicitudes.setSolicitante(solicitudesModel.getSolicitante());
 
         String[] fecha = solicitudesModel.getFechaSolicitada().toString().split("T");
         Date fech = new SimpleDateFormat("yyyy-MM-dd").parse(fecha[0]);

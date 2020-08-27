@@ -7,14 +7,14 @@ public class SolicitudesModel {
 
 
     private int id;
-    private Date FechaSolicitada;
+    private String FechaSolicitada;
     private String TipoSolicitud;
     private String Solicitante;
     private String NumeroEjidatario;
     private String NumeLote;
     private String Razon;
 
-    public SolicitudesModel(int id, Date fechaSolicitada, String tipoSolicitud, String solicitante, String numeroEjidatario, String numeLote, String razon) {
+    public SolicitudesModel(int id, String fechaSolicitada, String tipoSolicitud, String solicitante, String numeroEjidatario, String numeLote, String razon) {
         this.id = id;
         this.FechaSolicitada = fechaSolicitada;
         this.TipoSolicitud = tipoSolicitud;
@@ -36,11 +36,11 @@ public class SolicitudesModel {
         this.id = id;
     }
 
-    public Date getFechaSolicitada() {
+    public String getFechaSolicitada() {
         return FechaSolicitada;
     }
 
-    public void setFechaSolicitada(Date fechaSolicitada) {
+    public void setFechaSolicitada(String fechaSolicitada) {
         FechaSolicitada = fechaSolicitada;
     }
 
