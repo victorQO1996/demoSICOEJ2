@@ -97,7 +97,7 @@
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentación<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                       <li><a href=# th:href="@{/solicitudes/solicitudesForm?id=0}">Solicitar</a></li>
-                      <li><a href=# >Historial</a></li>
+                      <li><a href=# th:href="@{/solicitudes/showSolicitudes}">Historial Solicitudes</a></li>
 					  <li><a href=# >Actualizar</a></li>
                     </ul> 
                   </li>
@@ -242,7 +242,7 @@
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="form contact-form">
               <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
+              <form  action="mailto:victor.quintero@uabc.edu.mx" method="post" role="form" class="contactForm">
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
