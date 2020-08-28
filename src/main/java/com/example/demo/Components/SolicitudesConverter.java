@@ -18,7 +18,7 @@ public class SolicitudesConverter {
         Solicitudes solicitudes = new Solicitudes();
 
 
-        String[] fecha = solicitudesModel.getFechaSolicitada().toString().split("T");
+        String[] fecha = solicitudesModel.getFechaSolicitada().split("T");
         Date fech = new SimpleDateFormat("yyyy-MM-dd").parse(fecha[0]);
         solicitudes.setId(solicitudesModel.getId());
         solicitudes.setFechaSolicitada(fech);

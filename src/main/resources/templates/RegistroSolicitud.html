@@ -151,7 +151,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="section-headline text-center">
                         <br>
-                        <h2>Registrar Eventos</h2>
+                        <h2>Solicitar Documentacion</h2>
                     </div>
                 </div>
             </div>
@@ -170,34 +170,42 @@
                                 <input type="hidden" th:field="*{id}"></input>
 
                                 <div class="form-group">
-                                    <input type="date"  name="Fecha" th:field="*{fechaSolicitada}" th:value="${FechaSolicitada}"class="form-control" id="Fecha" placeholder="Nombre del Evento" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa la fecha del evento"></input>
+                                    <h7 align="left">Fecha de Solicitud</h7>
+                                    <input type="date"  name="FechaSolicitada" th:field="*{fechaSolicitada}" th:value="${FechaSolicitada}"class="form-control" id="FechaSolicitada" placeholder="Fecha Solicitud" data-rule="minlen:4" data-msg="Campo vacio, por favor ingresa la fecha en la que se registra la solicitud"></input>
                                     <div class="validation"></div>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" name="NombreEvento" th:field="*{tipoSolicitud}" th:value="${TipoSolicitud}"class="form-control" id="TipoSolicitud" placeholder="Tipo de Solicitud" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el nombre del evento" ></input>
+                                    <select type="text" name="TipoSolicitud"  th:field="*{tipoSolicitud}" th:value="${TipoSolicitud}" class="form-control" id="TipoSolicitud" placeholder="Tipo de Usuario" data-rule="minlen:4" data-msg="Datos incorrectos, Seleccione un tipo de Solicitud">
+                                        <option value="">Tipo de Solicitud</option>
+                                        <option value="Carta Poder">Carta Poder</option>
+                                        <option value="Carta Residencia">Carta Residencia</option>
+                                        <option value="Acta de Posesion">Acta de Posesion</option>
+                                        <option value="Permiso Especial">Permiso Especial</option>
+                                        <option value="Permiso de Ausencia">Permiso de Ausencia</option>
+                                    </select >
                                     <div class="validation"></div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text"  name="Fecha" th:field="*{solicitante}" th:value="${Solicitante}"class="form-control" id="Fecha" placeholder="Nombre del Evento" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa la fecha del evento"></input>
+                                    <input type="text"  name="Solicitante" th:field="*{solicitante}" th:value="${Solicitante}"class="form-control" id="Solicitante" placeholder="Nombre del Solicitante" data-rule="minlen:4" data-msg="Campo vacio, por favor ingresa el nombre del solicitante"></input>
+                                    <div class="validation"></div>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <input type="text" name="NumeroEjidatario" th:field="*{numeroEjidatario}" th:value="${NumeroEjidatario}"class="form-control" id="NumeroEjidatario" placeholder="Numero de Ejidatario " data-rule="minlen:4" data-msg="Campo vacio, por favor ingresa el numero de ejidatario ( En caso de no tener ingresar numero de lote anteponiendo dos ceros"></input>
+                                    <div class="validation"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="NumeLote" th:field="*{numeLote}" th:value="${NumeLote}"class="form-control" id="NumeLote" placeholder="Numero de Lote" data-rule="minlen:4" data-msg="Campo vacio, por favor ingresa el numero de lote"></input>
                                     <div class="validation"></div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="Horario" th:field="*{numeroEjidatario}" th:value="${NumeroEjidatario}"class="form-control" id="Horario" placeholder="Horario del Evento HH:MM AM o PM" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el horario del evento"></input>
+                                    <textarea class="form-control" type="text" name="Razon" th:field="*{razon}" th:value="${Razon}" rows="5" id="Razon" data-rule="required" data-msg="Campo vacio, por favor ingresa la razon de la solicitud" placeholder="Razon de solicitud "></textarea>
                                     <div class="validation"></div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" name="Horario" th:field="*{numeroEjidatario}" th:value="${NumeroEjidatario}"class="form-control" id="Horario" placeholder="Horario del Evento HH:MM AM o PM" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el horario del evento"></input>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="Horario" th:field="*{numeLote}" th:value="${NumeLote}"class="form-control" id="Horario" placeholder="Horario del Evento HH:MM AM o PM" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el horario del evento"></input>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="Horario" th:field="*{razon}" th:value="${Razon}"class="form-control" id="Horario" placeholder="Horario del Evento HH:MM AM o PM" data-rule="minlen:4" data-msg="Camp vacio, por favor ingresa el horario del evento"></input>
-                                    <div class="validation"></div>
-                                </div>
+
 
                                 <div class="text-center"><button type="submit">Guardar</button></div>
                             </form>

@@ -5,6 +5,21 @@ package com.example.demo.controllers;
 import com.example.demo.Model.SolicitudesModel;
 import com.example.demo.Service.EjidatarioService;
 import com.example.demo.Service.SolicitudesService;
+import com.example.demo.Service.impl.SolicitudesServiceImpl;
+import com.example.demo.constant.ViewConstant;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
+
+import com.example.demo.Model.EventoModel;
+import com.example.demo.Service.EventoService;
 import com.example.demo.constant.ViewConstant;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -21,7 +36,7 @@ import javax.validation.Valid;
 @RequestMapping("/solicitudes")
 public class SolicitudesController {
 
-
+    @Autowired
     @Qualifier("solicitudesServiceImpl")
     private SolicitudesService solicitudesService;
 
@@ -49,12 +64,7 @@ public class SolicitudesController {
 
 
 
-   /* @GetMapping("/calendario")
-    public String calendario(Model model) {
-        List<EventoModel> lista= eventoService.listAllEventos();
-        model.addAttribute("lista",lista);
-        return ViewConstant.CALENDARIO;
-    }*/
+
 
     @PostMapping("/addSolicitudes")
     public String addSolicitudes(@ModelAttribute(name = "solicitudesModel")@Valid SolicitudesModel solicitudesModel,
@@ -65,12 +75,12 @@ public class SolicitudesController {
         }else{
             model.addAttribute("result", 0);
         }
-        return  ViewConstant.SOLICITUDES;    //return  "redirect:/ejidatarios/showEjidatarios";
+        return  "redirect:/solicitudes/showSolicitudes";//return  "redirect:/ejidatarios/showEjidatarios";
     }
 
     @GetMapping("/showSolicitudes")
     public ModelAndView showSolicitudes(){
-        ModelAndView mav = new ModelAndView(ViewConstant.SOLICITUDES);
+        ModelAndView mav = new ModelAndView(ViewConstant.SOLICITUDESS);
         mav.addObject("solicitudes", solicitudesService.listAllSolicitudes());//evento
         return mav;
     }
