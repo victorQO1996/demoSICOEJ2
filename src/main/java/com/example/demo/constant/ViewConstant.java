@@ -16,8 +16,8 @@ public class ViewConstant {
     public static final String SOLICITUDES = "RegistroSolicitud";
     public static final String SOLICITUDESS = "SolicitudesRegistradas";
 
-    public static final String PAGOS = "EventosRegistrados";
-    public static final String PAGOS_FORM = "RegistroPago";
+    public static final String PAGOS = "PagosRegistrados";
+    public static final String PAGOSF = "RegistroPago";
 
 
 

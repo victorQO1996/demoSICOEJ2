@@ -87,7 +87,7 @@
                   </li>
 
                   <li>
-                    <a class="page-scroll" href="#services">Pagos/Cuotas</a>
+                    <a  href="#" th:href="@{/pagos/pagosForm?id=0}">Pagos/Cuotas</a>
                   </li>
 
                   <li>
@@ -97,9 +97,9 @@
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentación<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                       <li><a href=# th:href="@{/solicitudes/solicitudesForm?id=0}">Solicitar</a></li>
-                      <li><a href=# th:href="@{/solicitudes/showSolicitudes}">Historial Solicitudes</a></li>
+                      <li><a href=# >Historial</a></li>
 					  <li><a href=# >Actualizar</a></li>
-                    </ul> 
+                    </ul>
                   </li>
                   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -113,17 +113,17 @@
                     <a class="page-scroll" href="#contact">Contacto</a>
                   </li>
 
-				  
+
 				  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                       <li><a href=# >Cerrar Sesión</a></li>
                       <li><a href=# >#Historial# Pendiente</a></li>
                       <li><a href=# ></a>Registar Ejidatarios</li>
                       <li><a href=# >Actualizar Datos Personales</a></li>
-                    </ul> 
+                    </ul>
                   </li>
-                  
-                  
+
+
                 </ul>
               </div>
               <!-- navbar-collapse -->
@@ -154,7 +154,7 @@
               <div class="slider-content">
                 <!-- layer 1 -->
                 <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-               
+
                 </div>
                 <!-- layer 2 -->
                 <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
@@ -198,7 +198,7 @@
               <div class="single-icon">
                 <i class="fa fa-mobile"></i>
                 <p>
-                  cel: (653) 121-6639 <br>
+                  cel: 6865224435<br>
                   <span>Lunes-Viernes (9am-5pm)</span>
                 </p>
               </div>
@@ -210,7 +210,7 @@
               <div class="single-icon">
                 <i class="fa fa-envelope-o"></i>
                 <p>
-                  Email: ccorrona_juarez22@hotmail.com<br>
+                  Email: elena@uabc.edu.mx.com<br>
                 </p>
               </div>
             </div>
@@ -242,21 +242,21 @@
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="form contact-form">
               <div id="errormessage"></div>
-              <form  action="mailto:victor.quintero@uabc.edu.mx" method="post" role="form" class="contactForm">
+              <form action="" method="post" role="form" class="contactForm">
                 <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor Introduzca por lo menos 4 caracteres" />
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo electronico" data-rule="email" data-msg="Por favot introduzca un correo Electronico Valido" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Por favor Introduzca por lo menos 4 caracteres" />
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favo escriba un mensaje para nosotros" placeholder="Mensaje"></textarea>
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
                 <div class="text-center"><button type="submit">Enviar Mensaje</button></div>

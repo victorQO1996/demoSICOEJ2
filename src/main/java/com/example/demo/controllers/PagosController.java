@@ -3,6 +3,8 @@ package com.example.demo.controllers;
 
 import com.example.demo.Model.PagosModel;
 import com.example.demo.Service.PagoService;
+import com.example.demo.Service.impl.PagoServiceImpl;
+import com.example.demo.Service.EjidatarioService;
 import com.example.demo.constant.ViewConstant;
 
 import org.apache.commons.logging.Log;
@@ -37,9 +39,9 @@ public class PagosController {
             pagosModel = pagoService.findPagosByIdModel(id);
         }
         model.addAttribute("pagosModel", pagosModel);
-        return ViewConstant.PAGOS_FORM;
+        return ViewConstant.PAGOSF;
     }
-
+//comentarios x
     @PostMapping("/addPago")
     //El ModelAttribute corresponde con el th:object que utilizamos en la vista de pagosform
     public String addPago(@ModelAttribute(name = "pagosModel")PagosModel pagosModel,
